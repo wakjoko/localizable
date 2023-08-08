@@ -28,7 +28,7 @@ Enable model localization with below:
 ```php
 class Person extends Model
 {
-    use \Wakjoko\Localizable\HasLocalizable;
+    use \Wakjoko\Localizable\Localizable;
 
     public $localizable = ['name', 'title', 'gender'];
 }
@@ -110,7 +110,7 @@ $person->name('en');        // prints Noah: another way to get localized transla
 
 #### Localizable data are also inspectable in Tinker
 
-```json
+```php
 App\Models\Person {#10328
     id: 1,
     name: [
