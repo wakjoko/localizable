@@ -1,0 +1,61 @@
+{
+    "name": "wakjoko/localizable",
+    "description": "Transform any Eloquent attribute as multi language",
+    "keywords": [
+        "laravel",
+        "translate",
+        "language",
+        "polyglot",
+        "multilingual",
+        "locale",
+        "localizable",
+        "eloquent",
+        "model",
+        "polymorphic",
+        "morph",
+        "database",
+        "db",
+        "i18n"
+    ],
+    "homepage": "https://github.com/wakjoko/localizable",
+    "license": "MIT",
+    "type": "library",
+    "authors": [{
+        "name": "Wak Joko",
+        "email": "wakjoko@gmail.com",
+        "role": "Developer"
+    }],
+    "require": {
+        "php": "^8.0",
+        "illuminate/database": "^9.0|^10.0",
+        "illuminate/support": "^9.18|^10.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0|^8.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wakjoko\\Localizable\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wakjoko\\Localizable\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wakjoko\\Localizable\\ServiceProvider"
+            ]
+        }
+    }
+}
