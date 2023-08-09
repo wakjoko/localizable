@@ -26,7 +26,7 @@ class Builder extends \Illuminate\Database\Eloquent\Builder
     }
 
     /**
-     * shorthand for whereHasLocalizable() + loadLocalizableData()
+     * shorthand for whereHasLocalizable() + loadLocalizable()
      */
     public function withLocalizable($attribute = null, $locale = null, $value = null)
     {
@@ -34,7 +34,7 @@ class Builder extends \Illuminate\Database\Eloquent\Builder
 
         $this
             ->whereHasLocalizable()
-            ->loadLocalizableData();
+            ->loadLocalizable();
 
         return $this;
     }
@@ -58,10 +58,8 @@ class Builder extends \Illuminate\Database\Eloquent\Builder
     /**
      * preload any localized data requested
      */
-    public function loadLocalizableData($attribute = null, $locale = null)
+    public function loadLocalizable($attribute = null, $locale = null)
     {
-        $this->modelsShouldPreventLazyLoading = true;
-
         $this->remember($attribute, $locale);
 
         /** 
