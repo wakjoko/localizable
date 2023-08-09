@@ -5,7 +5,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/wakjoko/localizable.svg?style=flat-square)](https://packagist.org/packages/wakjoko/localizable)
 
 Transform any Eloquent attribute as multi language.\
-I found [spatie's translation package](https://github.com/spatie/laravel-translatable) is super awesome but it's lack of query flexibility makes me ichy to build this package instead.\
+I found [spatie's translation package](https://github.com/spatie/laravel-translatable) is super awesome but it's lack of query flexibility makes me ichy to build this package instead.
 
 ## Installation
 
@@ -30,7 +30,7 @@ class Person extends Model
 {
     use \Wakjoko\Localizable\Localizable;
 
-    public $localizable = ['name', 'title', 'gender'];
+    protected $localizable = ['name', 'title', 'gender'];
 }
 ```
 \
